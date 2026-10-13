@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Scroll</title>
+<style>
+/* The app's own page: theme.ts's ground, ink and green, set in Georgia. */
+:root {
+  --ground: #fbfaf7;
+  --ink: #1b1a17;
+  --muted: #6e6a5f;
+  --faint: #a29d92;
+  --accent: #2d5f4c;
+  --rule: #e3dfd7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #131518;
+    --ink: #e9e7e1;
+    --muted: #99958b;
+    --faint: #6a675f;
+    --accent: #7fb49b;
+    --rule: #272b30;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 18px/1.65 Georgia, 'Times New Roman', serif;
+}
+main { max-width: 640px; margin: 0 auto; padding: 56px 20px 80px; }
+h1 { font-weight: 400; font-size: 36px; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-weight: 400; font-size: 24px; margin: 40px 0 8px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h3 { font-size: 18px; margin: 24px 0 4px; }
+p, li { color: var(--ink); }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+a { color: var(--accent); }
+.eyebrow { font: 12px/1 Menlo, monospace; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 16px; }
+.eyebrow a { text-decoration: none; }
+.meta { color: var(--faint); font-style: italic; margin: 0 0 24px; }
+.lead { color: var(--muted); font-size: 20px; }
+.disclaimer { color: var(--faint); font-size: 14px; margin-top: 48px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Open Scroll</h1>
+<p class="lead">The writings of Ellen G. White, one passage at a time. A calm place to read instead of scroll.</p>
+
+<h2>Support</h2>
+<p>Questions, a passage that reads wrong, or anything else: write to <a href="mailto:support@open-scroll.com">support@open-scroll.com</a>. When reporting a passage, the book and page number shown under it are all that's needed.</p>
+
+<h2>Your account</h2>
+<p>Open Scroll works without signing up. To keep your reading across devices, use <em>You → Keep your reading</em> to sign in with Apple. To delete your account and everything in it, use <em>You → Delete account</em>.</p>
+
+<p><a href="privacy.html">Privacy Policy</a></p>
+
+<p class="disclaimer">Open Scroll is not affiliated with or endorsed by the Ellen G. White Estate, Inc. or the General Conference of Seventh-day Adventists.</p>
+</main>
+</body>
+</html>
