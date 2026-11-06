@@ -4,62 +4,136 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Open Scroll</title>
-<style>
-/* The app's own page: theme.ts's ground, ink and green, set in Georgia. */
-:root {
-  --ground: #fbfaf7;
-  --ink: #1b1a17;
-  --muted: #6e6a5f;
-  --faint: #a29d92;
-  --accent: #2d5f4c;
-  --rule: #e3dfd7;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ground: #131518;
-    --ink: #e9e7e1;
-    --muted: #99958b;
-    --faint: #6a675f;
-    --accent: #7fb49b;
-    --rule: #272b30;
-  }
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: var(--ground);
-  color: var(--ink);
-  font: 18px/1.65 Georgia, 'Times New Roman', serif;
-}
-main { max-width: 640px; margin: 0 auto; padding: 56px 20px 80px; }
-h1 { font-weight: 400; font-size: 36px; line-height: 1.2; margin: 0 0 8px; }
-h2 { font-weight: 400; font-size: 24px; margin: 40px 0 8px; padding-top: 24px; border-top: 1px solid var(--rule); }
-h3 { font-size: 18px; margin: 24px 0 4px; }
-p, li { color: var(--ink); }
-ul { padding-left: 22px; }
-li { margin: 6px 0; }
-a { color: var(--accent); }
-.eyebrow { font: 12px/1 Menlo, monospace; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 16px; }
-.eyebrow a { text-decoration: none; }
-.meta { color: var(--faint); font-style: italic; margin: 0 0 24px; }
-.lead { color: var(--muted); font-size: 20px; }
-.disclaimer { color: var(--faint); font-size: 14px; margin-top: 48px; }
-</style>
+<meta name="description" content="The writings of Ellen G. White, one passage at a time. A calm place to read instead of scroll.">
+<meta name="theme-color" content="#2a221c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Open Scroll">
+<meta property="og:title" content="Open Scroll">
+<meta property="og:description" content="The writings of Ellen G. White, one passage at a time. A calm place to read instead of scroll.">
+<meta property="og:url" content="https://open-scroll.com/">
+<meta property="og:image" content="https://open-scroll.com/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The cover of Open Scroll: gilt lettering on red cloth.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/libre-caslon-text-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="book.css">
+<script src="book.js"></script>
 </head>
 <body>
-<main>
-<h1>Open Scroll</h1>
-<p class="lead">The writings of Ellen G. White, one passage at a time. A calm place to read instead of scroll.</p>
+<div class="desk">
+<main class="book">
 
-<h2>Support</h2>
-<p>Questions, a passage that reads wrong, or anything else: write to <a href="mailto:support@open-scroll.com">support@open-scroll.com</a>. When reporting a passage, the book and page number shown under it are all that's needed.</p>
+  <section class="page cover" id="cover" data-label="COVER">
+    <div class="cover-outer">
+      <div class="cover-inner">
+        <div class="cover-fleuron" aria-hidden="true">❦</div>
+        <div class="cover-title">
+          <h1>Open<br>Scroll</h1>
+          <div class="cover-rule"></div>
+          <p class="cover-tagline">The writings of Ellen G. White, one passage at a time</p>
+        </div>
+        <a class="cover-open" href="#title">Open the book</a>
+      </div>
+    </div>
+  </section>
 
-<h2>Your account</h2>
-<p>Open Scroll works without signing up. To keep your reading across devices, use <em>You → Keep your reading</em> to sign in with Apple. To delete your account and everything in it, use <em>You → Delete account</em>.</p>
+  <section class="page sheet" id="title" data-label="TITLE PAGE" data-title="Title page">
+    <div class="page-body">
+      <div class="title-page">
+        <div class="title-main">
+          <h2>Open Scroll</h2>
+          <div class="title-rule"></div>
+          <p class="title-byline">The writings of<br><span class="title-author">Ellen G. White</span><br>one passage at a time</p>
+          <div class="fleuron" style="font-size:26px" aria-hidden="true">❦</div>
+          <p class="title-calm">A calm place to read instead of scroll.</p>
+          <!-- TODO(app-store): replace with the final App Store URL. -->
+          <a class="title-store" href="TODO-APP-STORE-URL">Now available for iPhone</a>
+        </div>
+        <p class="imprint">open-scroll.com<br>MMXXVI</p>
+      </div>
+    </div>
+  </section>
 
-<p><a href="privacy.html">Privacy Policy</a></p>
+  <section class="page sheet" id="notices" data-label="PAGE ii" data-title="Notices">
+    <div class="page-body">
+      <div class="notices">
+        <h2 class="visually-hidden">Notices</h2>
+        <p>Open Scroll is not affiliated with or endorsed by the Ellen G. White Estate, Inc. or the General Conference of Seventh-day Adventists.</p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+        <div class="fleuron" aria-hidden="true">❧</div>
+        <p class="notices-set">Set in Caslon.</p>
+      </div>
+    </div>
+    <p class="folio">ii</p>
+  </section>
 
-<p class="disclaimer">Open Scroll is not affiliated with or endorsed by the Ellen G. White Estate, Inc. or the General Conference of Seventh-day Adventists.</p>
+  <section class="page sheet" id="contents" data-label="PAGE iii" data-title="Contents">
+    <div class="running-head" aria-hidden="true"><span>Open Scroll</span><span>Contents</span></div>
+    <div class="page-body contents">
+      <h2>Contents</h2>
+      <div class="fleuron" aria-hidden="true">❦</div>
+      <nav aria-label="Contents">
+        <ol class="toc">
+          <li><a href="#notices"><span class="toc-num"></span><span>Notices</span><span class="toc-leader" aria-hidden="true"></span><span>ii</span></a></li>
+          <li><a href="#support"><span class="toc-num">I.</span><span>Support</span><span class="toc-leader" aria-hidden="true"></span><span>1</span></a></li>
+          <li><a href="#account"><span class="toc-num">II.</span><span>Your Account</span><span class="toc-leader" aria-hidden="true"></span><span>2</span></a></li>
+          <li><a href="privacy.html"><span class="toc-num">APP.</span><span>Privacy Policy</span><span class="toc-leader" aria-hidden="true"></span><span>3</span></a></li>
+        </ol>
+      </nav>
+    </div>
+    <p class="folio">iii</p>
+  </section>
+
+  <section class="page sheet" id="support" data-label="PAGE 1" data-title="Support">
+    <div class="running-head" aria-hidden="true"><span>Open Scroll</span><span>Support</span></div>
+    <div class="page-body">
+      <div class="chapter-head">
+        <span class="chapter-num">Chapter I</span>
+        <h2>Support</h2>
+        <div class="fleuron chapter-orn" aria-hidden="true">· ❦ ·</div>
+      </div>
+      <div class="prose">
+        <p class="dropcap"><span class="opening">Questions, a passage that reads wrong,</span> or anything else: write to <a href="mailto:support@open-scroll.com">support@<wbr>open-scroll.com</a>.</p>
+        <p>When reporting a passage, the book and page number shown under it are all that's needed.</p>
+      </div>
+      <div class="fleuron chapter-end" aria-hidden="true">❧</div>
+    </div>
+    <p class="folio">1</p>
+  </section>
+
+  <section class="page sheet" id="account" data-label="PAGE 2" data-title="Your Account">
+    <div class="running-head" aria-hidden="true"><span>Open Scroll</span><span>Your Account</span></div>
+    <div class="page-body">
+      <div class="chapter-head">
+        <span class="chapter-num">Chapter II</span>
+        <h2>Your Account</h2>
+        <div class="fleuron chapter-orn" aria-hidden="true">· ❦ ·</div>
+      </div>
+      <div class="prose">
+        <p class="dropcap"><span class="opening">Open Scroll works</span> without signing up. To keep your reading across devices, use <em class="path">You → Keep your reading</em> to sign in with Apple.</p>
+        <p>To delete your account and everything in it, use <em class="path">You → Delete account</em>.</p>
+      </div>
+      <div class="fleuron chapter-end" aria-hidden="true">❧</div>
+    </div>
+    <p class="folio">2</p>
+  </section>
+
 </main>
+
+<nav class="pager" aria-label="Pages">
+  <button type="button" id="prev">← Previous</button>
+  <a class="pager-label" id="page-label" href="#contents">COVER</a>
+  <button type="button" id="next">Next →</button>
+</nav>
+
+<footer class="colophon">
+  <p>Open Scroll is not affiliated with or endorsed by the Ellen G. White Estate, Inc. or the General Conference of Seventh-day Adventists.</p>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+</div>
 </body>
 </html>

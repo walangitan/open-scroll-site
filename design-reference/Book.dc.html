@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Open Scroll — a book from 1908</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#8f2419}a:hover{color:#5e160f}
+button{cursor:pointer}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #2a221c; font-family: 'Libre Caslon Text', Georgia, serif; color: #1f1a14; display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 40px 16px 28px; box-sizing: border-box">
+
+  <sc-if value="{{isCover}}" hint-placeholder-val="{{ true }}">
+    <div style="position: relative; width: 100%; max-width: 560px; min-height: 780px; box-sizing: border-box; background-color: #5a1f1b; background-image: repeating-linear-gradient(0deg, rgba(0,0,0,0.07) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 3px); border-radius: 3px 8px 8px 3px; box-shadow: inset 10px 0 14px rgba(0,0,0,0.35), 0 18px 40px rgba(0,0,0,0.5); padding: 36px; display: flex">
+      <div style="flex: 1; border: 3px double #d4af5a; padding: 10px; display: flex">
+        <div style="flex: 1; border: 1px solid #d4af5a; display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center; padding: 56px 24px 44px; color: #d4af5a">
+          <div style="font-size: 30px; letter-spacing: 10px" aria-hidden="true">❦</div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 22px">
+            <h1 style="margin: 0; font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: clamp(44px, 10vw, 68px); line-height: 1; letter-spacing: 6px">OPEN<br>SCROLL</h1>
+            <div style="width: 120px; border-top: 1px solid #d4af5a; border-bottom: 1px solid #d4af5a; height: 3px"></div>
+            <p style="margin: 0; font-style: italic; font-size: 19px; line-height: 1.5; max-width: 320px; color: #e6c97e">The writings of Ellen G. White, one passage at a time</p>
+          </div>
+          <button onClick="{{open}}" style="min-height: 44px; padding: 0 22px; background: transparent; border: 1px solid #d4af5a; color: #e6c97e; font-family: 'Libre Caslon Text', Georgia, serif; font-size: 15px; letter-spacing: 3px">OPEN THE BOOK</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{notCover}}" hint-placeholder-val="{{ false }}">
+    <div style="position: relative; width: 100%; max-width: 600px; min-height: 820px; box-sizing: border-box; background: #f4ecd8; box-shadow: inset 14px 0 18px -10px rgba(80,55,20,0.28), 0 18px 40px rgba(0,0,0,0.45); padding: clamp(28px, 7vw, 60px) clamp(24px, 7vw, 64px) clamp(40px, 9vw, 84px) clamp(24px, 7vw, 56px); display: flex; flex-direction: column; overflow: hidden">
+
+      <svg aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.09">
+        <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0 0.1  0 0 0 1 0"/></filter>
+        <rect width="100%" height="100%" filter="url(#grain)"/>
+      </svg>
+
+      <div aria-hidden="true" style="position: absolute; top: 0; right: 52px; width: 18px; height: 132px; background: #8f2419; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 86%, 0 100%); box-shadow: 1px 0 2px rgba(0,0,0,0.3)"></div>
+
+      <sc-if value="{{hasHead}}" hint-placeholder-val="{{ false }}">
+        <div style="position: relative; display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; letter-spacing: 3px; color: #5b4a33; padding-bottom: 8px; border-bottom: 1px solid #b9a682; margin-bottom: 44px">
+          <span>OPEN SCROLL</span>
+          <span>{{runningHead}}</span>
+        </div>
+      </sc-if>
+
+      <div style="position: relative; flex: 1; display: flex; flex-direction: column">
+
+        <sc-if value="{{isTitle}}" hint-placeholder-val="{{ false }}">
+          <div style="flex: 1; min-height: 660px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 22px; padding-top: 40px">
+              <h1 style="margin: 0; font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: clamp(40px, 9vw, 60px); letter-spacing: 5px; line-height: 1">OPEN SCROLL</h1>
+              <div style="width: 64px; border-top: 1px solid #1f1a14"></div>
+              <p style="margin: 0; font-size: 15px; letter-spacing: 3px; line-height: 1.8">THE WRITINGS OF<br><span style="color: #8f2419; font-size: 22px; letter-spacing: 4px">ELLEN G. WHITE</span><br>ONE PASSAGE AT A TIME</p>
+              <div style="font-size: 26px; color: #8f2419" aria-hidden="true">❦</div>
+              <p style="margin: 0; font-style: italic; font-size: 18px; line-height: 1.5; max-width: 340px">A calm place to read instead of scroll.</p>
+              <a href="#" style="margin-top: 12px; display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-top: 1px solid #8f2419; border-bottom: 1px solid #8f2419; text-decoration: none; font-size: 14px; letter-spacing: 3px">NOW AVAILABLE FOR IPHONE</a>
+            </div>
+            <div style="font-size: 13px; letter-spacing: 3px; line-height: 1.9; color: #3d3220">
+              <div style="width: 40px; border-top: 1px solid #3d3220; margin: 0 auto 14px"></div>
+              OPEN-SCROLL.COM<br>MMXXVI
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{isCopyright}}" hint-placeholder-val="{{ false }}">
+          <div style="flex: 1; min-height: 600px; display: flex; flex-direction: column; justify-content: flex-end; gap: 16px; font-size: 14px; line-height: 1.65; text-align: center; color: #3d3220; max-width: 400px; margin: 0 auto">
+            <p style="margin: 0">The writings presented in Open Scroll are in the public domain.</p>
+            <p style="margin: 0">Open Scroll is not affiliated with or endorsed by the Ellen G. White Estate, Inc. or the General Conference of Seventh-day Adventists.</p>
+            <p style="margin: 0">How your reading is kept, and what happens to it, is set out in the <a href="Privacy.dc.html">Privacy Policy</a>.</p>
+            <div style="font-size: 18px; color: #8f2419" aria-hidden="true">❧</div>
+            <p style="margin: 0; font-style: italic; font-size: 13px">Set in Caslon.</p>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{isContents}}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-direction: column; gap: 30px">
+            <h2 style="margin: 0; text-align: center; font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: 32px; letter-spacing: 6px">CONTENTS</h2>
+            <div style="font-size: 20px; color: #8f2419; text-align: center" aria-hidden="true">❦</div>
+            <nav aria-label="Contents" style="display: flex; flex-direction: column; gap: 6px">
+              <sc-for list="{{toc}}" as="entry" hint-placeholder-count="3">
+                <button onClick="{{entry.pick}}" style="min-height: 48px; display: flex; align-items: baseline; gap: 10px; width: 100%; padding: 8px 0; background: transparent; border: none; font-family: 'Libre Caslon Text', Georgia, serif; font-size: 18px; color: #1f1a14; text-align: left">
+                  <span style="font-size: 13px; letter-spacing: 2px; color: #8f2419; min-width: 42px">{{entry.num}}</span>
+                  <span>{{entry.label}}</span>
+                  <span aria-hidden="true" style="flex: 1; border-bottom: 2px dotted #8a7650; transform: translateY(-5px)"></span>
+                  <span style="font-variant-numeric: oldstyle-nums">{{entry.folio}}</span>
+                </button>
+              </sc-for>
+              <a href="Privacy.dc.html" style="min-height: 48px; display: flex; align-items: baseline; gap: 10px; width: 100%; padding: 8px 0; font-size: 18px; color: #1f1a14; text-decoration: none; box-sizing: border-box">
+                <span style="font-size: 13px; letter-spacing: 2px; color: #8f2419; min-width: 42px">APP.</span>
+                <span>Privacy</span>
+                <span aria-hidden="true" style="flex: 1; border-bottom: 2px dotted #8a7650; transform: translateY(-5px)"></span>
+                <span style="font-variant-numeric: oldstyle-nums">3</span>
+              </a>
+            </nav>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{isSupport}}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; margin-bottom: 34px; text-align: center">
+            <span style="font-size: 13px; letter-spacing: 4px; color: #8f2419">CHAPTER I</span>
+            <h2 style="margin: 0; font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: 40px">Support</h2>
+            <div style="font-size: 16px; color: #8f2419; letter-spacing: 8px" aria-hidden="true">· ❦ ·</div>
+          </div>
+          <p style="margin: 0 0 18px; font-size: 19px; line-height: 1.7; text-align: justify; hyphens: auto"><span style="float: left; font-family: 'Libre Caslon Display', Georgia, serif; font-size: 74px; line-height: 60px; padding: 6px 10px 0 0; color: #8f2419">Q</span><span style="font-variant: small-caps; letter-spacing: 1px">uestions, a passage that reads wrong,</span> or anything else: write to <a href="mailto:support@open-scroll.com">support@open-scroll.com</a>, and your letter will be read.</p>
+          <p style="margin: 0; font-size: 19px; line-height: 1.7; text-align: justify; hyphens: auto; text-indent: 1.5em">When reporting a passage, the book and page number shown under it are all that's needed.</p>
+          <div style="margin-top: 36px; text-align: center; font-size: 18px; color: #8f2419" aria-hidden="true">❧</div>
+        </sc-if>
+
+        <sc-if value="{{isAccount}}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; margin-bottom: 34px; text-align: center">
+            <span style="font-size: 13px; letter-spacing: 4px; color: #8f2419">CHAPTER II</span>
+            <h2 style="margin: 0; font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: 40px">Your Account</h2>
+            <div style="font-size: 16px; color: #8f2419; letter-spacing: 8px" aria-hidden="true">· ❦ ·</div>
+          </div>
+          <p style="margin: 0 0 18px; font-size: 19px; line-height: 1.7; text-align: justify; hyphens: auto"><span style="float: left; font-family: 'Libre Caslon Display', Georgia, serif; font-size: 74px; line-height: 60px; padding: 6px 10px 0 0; color: #8f2419">O</span><span style="font-variant: small-caps; letter-spacing: 1px">pen Scroll works</span> without signing up.</p>
+          <p style="margin: 0 0 18px; font-size: 19px; line-height: 1.7; text-align: justify; hyphens: auto; text-indent: 1.5em">To keep your reading across devices, use <span style="font-variant: small-caps; letter-spacing: 1px; color: #8f2419">You → Keep your reading</span> to sign in with Apple.</p>
+          <p style="margin: 0; font-size: 19px; line-height: 1.7; text-align: justify; hyphens: auto; text-indent: 1.5em">To delete your account and everything in it, use <span style="font-variant: small-caps; letter-spacing: 1px; color: #8f2419">You → Delete account</span>.</p>
+          <div style="margin-top: 36px; text-align: center; font-size: 18px; color: #8f2419" aria-hidden="true">❧</div>
+        </sc-if>
+
+      </div>
+
+      <sc-if value="{{hasFolio}}" hint-placeholder-val="{{ false }}">
+        <div style="position: relative; text-align: center; margin-top: 40px; font-size: 15px; font-variant-numeric: oldstyle-nums; color: #3d3220">{{folio}}</div>
+      </sc-if>
+    </div>
+  </sc-if>
+
+  <div style="width: 100%; max-width: 600px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px">
+    <button onClick="{{prev}}" aria-label="Previous page" style="min-height: 44px; min-width: 110px; padding: 0 16px; background: transparent; border: 1px solid #a08c66; color: #e9dcc0; font-family: 'Libre Caslon Text', Georgia, serif; font-size: 15px; letter-spacing: 1px">← Previous</button>
+    <button onClick="{{toContents}}" style="min-height: 44px; padding: 0 16px; background: transparent; border: none; color: #e9dcc0; font-family: 'Libre Caslon Text', Georgia, serif; font-size: 14px; letter-spacing: 3px">{{pageLabel}}</button>
+    <button onClick="{{next}}" aria-label="Next page" style="min-height: 44px; min-width: 110px; padding: 0 16px; background: transparent; border: 1px solid #a08c66; color: #e9dcc0; font-family: 'Libre Caslon Text', Georgia, serif; font-size: 15px; letter-spacing: 1px">Next →</button>
+  </div>
+
+  <div style="color: #cdbd9c; font-size: 13px; text-align: center; line-height: 1.6; max-width: 600px">
+    Not affiliated with the Ellen G. White Estate · <a href="Privacy.dc.html" style="color: #e9dcc0">Privacy Policy</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const p = (this.state && this.state.page) || 0;
+    const pages = [
+      { key: 'cover', label: 'COVER' },
+      { key: 'title', label: 'TITLE PAGE' },
+      { key: 'copyright', label: 'PAGE ii', folio: 'ii' },
+      { key: 'contents', label: 'PAGE iii', folio: 'iii', head: 'CONTENTS' },
+      { key: 'support', label: 'PAGE 1', folio: '1', head: 'SUPPORT' },
+      { key: 'account', label: 'PAGE 2', folio: '2', head: 'YOUR ACCOUNT' }
+    ];
+    const n = pages.length;
+    const go = (i) => this.setState({ page: Math.max(0, Math.min(n - 1, i)) });
+    const cur = pages[p];
+    return {
+      isCover: p === 0,
+      notCover: p !== 0,
+      isTitle: cur.key === 'title',
+      isCopyright: cur.key === 'copyright',
+      isContents: cur.key === 'contents',
+      isSupport: cur.key === 'support',
+      isAccount: cur.key === 'account',
+      hasHead: !!cur.head,
+      runningHead: cur.head || '',
+      hasFolio: !!cur.folio,
+      folio: cur.folio || '',
+      pageLabel: cur.label,
+      open: () => go(1),
+      prev: () => go(p - 1),
+      next: () => go(p + 1),
+      toContents: () => go(3),
+      toc: [
+        { num: '', label: 'Notices', folio: 'ii', pick: () => go(2) },
+        { num: 'I.', label: 'Support', folio: '1', pick: () => go(4) },
+        { num: 'II.', label: 'Your Account', folio: '2', pick: () => go(5) }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
